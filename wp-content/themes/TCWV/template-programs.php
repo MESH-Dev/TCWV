@@ -11,7 +11,7 @@ Template Name: Programs
     <div class="container content row">
         <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <div class="page_title row">
-        	<h1>Organization</h1>
+        	<h1><?php the_title(); ?></h1>
         </div>
         <div class="row">
         	<div class="back"><a href="<?php bloginfo('url'); ?>"> Back Home</a></div>
@@ -30,8 +30,8 @@ Template Name: Programs
                  
             </div>-->
         	<div class="single_content post">
-            	<h2 class="org"><?php the_title();?></h2>
-                 <div class="content">
+            	<!-- <h2 class="org"><?php //the_title();?></h2>
+ -->                 <div class="content">
 					 <?php
                           if ( has_post_thumbnail() ) {
                               the_post_thumbnail();
